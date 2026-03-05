@@ -1,0 +1,116 @@
+footer{
+    @include flexbox_row(center,center);
+    font-family: $secondaryFont;
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    box-sizing: border-box;
+    padding: 1.5rem 2.75rem 0.1rem 2.75rem;
+
+    .footer__title{
+        font-family: $primaryFont;
+        width: 100%;
+        font-size: px-to-rem(20);
+        font-weight: 500;
+        color: $blueTextColor;
+        border-bottom: 2px solid $blueTextColor;
+        text-align: center;
+        padding: 0 2rem;
+        box-sizing: border-box;
+    }
+    .footer__section{
+        @include flexbox_column(center,center);
+        font-family: inherit;
+        margin: 0 2rem;
+        margin-top: 0.75rem;
+        padding: 0 2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer__options{
+        @include flexbox_row(space-evenly,center);
+        gap: 2.5rem;
+        margin: 0.5rem 0 0.7rem 0;
+        
+        button{
+            font-family:inherit;
+            border-color: #00000000;
+            background-color: #00000000;
+            color: $whiteColor;
+            font-weight: 300;
+            text-decoration: none;
+            cursor: pointer;
+            text-align: center;
+            
+        }
+    }
+    .footer__network{
+        @include flexbox_row(space-between,center);
+        gap: 2.5rem;
+        margin: 0.5rem 0 0.7rem 0;
+        button{
+            @include flexbox_row(center,center);
+            text-decoration: none;
+            cursor: pointer;
+            border-color: #00000000;
+            background-color: #00000000;
+            i{
+                color: $whiteColor;
+                font-size: px-to-rem(28);
+                margin: 0;
+                padding: 0;
+                
+            }
+        }
+    }
+    .footer__contacts{
+        @include flexbox_row(space-between,center);
+        gap: 2.5rem;
+        margin: 0.5rem 0 0.7rem 0;
+        p{
+            font-family: inherit;
+            color: $whiteColor;
+            font-weight: 300;
+            text-decoration: none;
+            a{
+                font-family: inherit;
+                cursor: pointer;
+                color: $blueTextColor;
+                margin: 0 0.4rem;
+                text-decoration: none;
+            }
+        }
+    }
+    .footer__copyright{
+        @include flexbox_column(center,center);
+        font-family: inherit;
+        margin: 0 2rem;
+        margin-top: 0.75rem;
+        margin-bottom: 1rem;
+        padding: 0 2rem;
+        width: 100%;
+        box-sizing: border-box;
+        p{
+            font-family: inherit;
+            color:$whiteColor;
+            font-weight: 200;
+            font-size: px-to-rem(12);
+            text-align: center;
+            a{
+                font-family: inherit;
+                font-size: inherit;
+                font-style: 500;
+                cursor: pointer;
+                color: $blueTextColor;
+                margin: 0 0.4rem;
+                text-decoration: none;
+            }
+        }
+    }
+}
+    
+

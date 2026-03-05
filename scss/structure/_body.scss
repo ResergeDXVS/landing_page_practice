@@ -1,0 +1,304 @@
+main{
+    @include flexbox_row(space-between,center);
+    width: 100%;
+    height: 85vh;
+    padding:6rem 4rem;
+    box-sizing: border-box;
+    background-image: linear-gradient(
+        135deg,
+        $blueTextColor,
+        $textRedColor
+    );
+    
+    @include media_adjustments{
+        @include flexbox_column(flex-start,center);
+        padding:4rem 3rem;
+        padding-bottom: 6rem;
+    }
+    @include phone_adjustments{
+        @include flexbox_column(flex-start,center);
+        padding:2rem 2rem;
+        padding-bottom: 6rem;
+    }
+
+    .landing__image{
+        position: relative;
+        display: inline-block;
+        padding: 1rem;
+        margin: 0;
+        img{
+            position: inherit;
+            height: auto;
+            margin: 0;
+        }
+        #image__games{
+            z-index: 4;
+            width: 580px;
+            @include media_adjustments{
+                width: 480px;
+            }
+            @include phone_adjustments{
+                width: 400px;
+            }
+        }
+        
+        
+    }
+    .image__person{
+        @include media_adjustments{
+            display: none;
+        }
+        @include phone_adjustments{
+            display: none;
+        }
+    }
+    .landing__octagon{
+        position: absolute;
+        top: 82px;
+        left: 50px;
+        width: 300px;
+        height: 300px;
+        z-index: 1;
+        background-color: rgba(54, 58, 255, 0.4);
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        transform: rotate(10deg);
+
+        @include media_adjustments{
+            top: 60px;
+            left: 12px;
+            width: 220px;
+            height: 220px;
+        }
+        @include phone_adjustments{
+            top: 44px;
+            left: 16px;
+            width: 220px;
+            height: 220px;
+        }
+    }
+    .landing__star{
+        position: absolute;
+        top: 162px;
+        left: 231px;
+        width: 320px;
+        height: 320px;
+        z-index: 2;
+        background-color: rgba(107, 255, 102, 0.4);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        transform: rotate(45deg);
+        @include media_adjustments{
+            top: 130px;
+            left: 142px;
+            width: 220px;
+            height: 220px;
+        }
+        @include phone_adjustments{
+            top: 135px;
+            left: 177px;
+            width: 240px;
+            height: 240px;
+        }
+    }
+    .landing__rombus{
+        position: absolute;
+        top: 34px;
+        left: 236px;
+        width: 327px;
+        height: 260px;
+        z-index: 3;
+        background-color: rgba(255, 224, 87, 0.4);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        transform: rotate(12deg);
+        @include media_adjustments{
+            top: 22px;
+            left: 147px;
+            width: 220px;
+            height: 220px;
+        }
+        @include phone_adjustments{
+            top: 40px;
+            left: 152px;
+            width: 278px;
+            height: 240px;
+        }
+    }
+    .landing__elipse{
+        position: absolute;
+        top: 82px;
+        left: -53px;
+        width: 339px;
+        height: 195px;
+        z-index: 1;
+        backdrop-filter: blur(20px);
+        background-color: rgba(255, 92, 255, 0.3);
+        clip-path: ellipse(25% 40% at 50% 50%);
+        transform: rotate(49deg) scaleX(1.8);
+    }
+
+
+    .landing__info{
+        @include flexbox_column(space-evenly,center);
+        width: auto;
+        padding: 2rem 3rem;
+        background: rgba(255,255,255,0.25);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow:  0 .5rem 2rem rgba(0,0,0,0.15);
+        border-bottom-left-radius: 2.5rem;
+        border-top-right-radius: 2.5rem;
+        
+        @include media_adjustments{
+            padding: 1.5rem 2rem;
+        }
+        @include phone_adjustments{
+            padding: 1.5rem 2rem;
+        }
+
+        h1{
+            width: 100%;
+            font-size: px-to-rem(56);
+            line-height: 1.5;
+            color: $whiteColor;
+            font-weight: 700;
+            text-align: justify;
+            margin-bottom: 1rem;
+            @include media_adjustments{
+                font-size: px-to-rem(36);
+                line-height: 1.2;
+                margin-bottom: .75rem;
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(28);
+                line-height: 1;
+                margin-bottom: .5rem;
+            }
+        }
+        h2{
+            width: 100%;
+            font-size: px-to-rem(36);
+            line-height: 1.5;
+            color: $whiteColor;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            @include media_adjustments{
+                font-size: px-to-rem(28);
+                line-height: 1.25;
+                margin-bottom: .85rem;
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(20);
+                line-height: 1;
+                margin-bottom: .65rem;
+            }
+        }
+        p{
+            width: 100%;
+            font-size: px-to-rem(20);
+            line-height: 1.5;
+            color: $whiteColor;
+            font-weight: 200;
+            margin-bottom: 1.6rem;
+            @include media_adjustments{
+                font-size: px-to-rem(16);
+                margin-bottom: 1.2rem;
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(12);
+                margin-bottom: .9rem;
+            }
+        }
+        
+        .landing__form {
+            @include flexbox_row(center, center);
+            width: auto;
+            height: auto;
+            padding: 1rem;
+            gap: 1rem;
+
+            input[type="text"] {
+                width: auto;
+                color: $whiteColor;
+                font-family: $secondaryFont;
+                border: 4px solid $blueTextColor;
+                border-radius: .5rem;
+                padding: .25rem 1rem;
+                background-color: rgba(255, 255, 255, 0);
+                font-size: px-to-rem(32);
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+                @include media_adjustments {
+                    font-size: px-to-rem(28);
+                    margin: .25rem;
+                }
+
+                @include phone_adjustments {
+                    font-size: px-to-rem(24);
+                    margin: .25rem;
+
+                }
+
+                &:hover {
+                    border-color: $textRedColor;
+                }
+            }
+
+            button {
+                width: auto;
+                height: 100%;
+                @include flexbox_row(center, center);
+                background-color: $blueTextColor;
+                border: 2px solid $blueTextColor;
+                border-radius: 0.5rem;
+                transition: all 0.25s ease-in-out;
+                padding: .25rem 1rem;
+
+                p {
+                    font-size: px-to-rem(32);
+                    color: $whiteColor;
+                    margin: 0;
+                    font-weight: 700;
+
+                    @include media_adjustments {
+                        font-size: px-to-rem(28);
+                    }
+
+                    @include phone_adjustments {
+                        font-size: px-to-rem(24);
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    background-color: $textRedColor;
+                    border: 2px solid $textRedColor;
+
+                    @include media_adjustments {
+                        transform: scale(1.05);
+                    }
+
+                    @include phone_adjustments {
+                        transform: scale(1.05);
+                    }
+                }
+
+                @include phone_adjustments {
+                    width: 100%; 
+                }
+            }
+
+            @include media_adjustments {
+                @include flexbox_row(center, center);
+                padding: 0;
+                width: 100%;
+            }
+
+            @include phone_adjustments {
+                @include flexbox_row(center, center);
+                padding: 0;
+                width: 100%;
+            }
+        }
+
+        
+    }
+}

@@ -1,0 +1,134 @@
+*{
+    font-family: $primaryFont;
+    font-size: px-to-rem(16);
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $whiteColor;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 1.5rem 2.75rem;
+    box-sizing: border-box;
+    background-color: $backgroundColor;
+
+    @include media_adjustments{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        padding: 1.5rem 2.25rem;
+    }
+    @include phone_adjustments{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        padding: 1rem 1.75rem;
+    }
+
+    .header__logo{
+        width:fit-content;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        transition: all 0.25s ease-in-out;
+
+        @include media_adjustments{
+            width:100%;
+            margin:0;
+        }
+        @include phone_adjustments{
+            width:100%;
+            margin:0;
+        }
+        &:hover{
+            transform: scale(1.1);
+        }
+        img{
+            width: 120px;
+            height: auto;
+            @include media_adjustments{
+                width: 100px;
+            }
+            @include phone_adjustments{
+                width: 80px;
+            }
+        }
+        p{
+            font-size: px-to-rem(24);
+            font-family: $primaryFont;
+            color: $textRedColor;
+            line-height: 1.2;
+            font-weight: 900;
+            @include media_adjustments{
+                font-size: px-to-rem(20);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(16);
+            }
+        }
+    }
+    .header__options{
+        @include flexbox_row(flex-end,center);
+        width: auto;
+        padding: 10px;
+        margin-right: 2rem;
+        transition: all 0.25s ease-in-out;
+        gap:4rem;
+        @include media_adjustments{
+            @include flexbox_row(center,center);
+            width: 100%;
+            gap:2.5rem;
+            margin-right: 0;
+        }
+        @include phone_adjustments{
+            @include flexbox_row(center,center);
+            width: 100%;
+            gap:1.25rem;
+            margin-right: 0;
+        }
+        a{
+            font-size: px-to-rem(24);
+            font-family: $primaryFont;
+            color: $whiteColor;
+            line-height: 1.15;
+            font-weight: 900;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.25s ease-in-out;
+            
+            &:hover{
+                transform: scale(1.1);
+                filter: brightness(1.75);
+            }
+            @include media_adjustments{
+                font-size: px-to-rem(20);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(16);
+            }
+        }
+    }
+}
