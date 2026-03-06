@@ -27,3 +27,27 @@
         @content;
     }
 }
+
+@keyframes rotateForms {
+    0%{
+        transform: rotate(0deg);
+        filter: brightness(1);
+    }
+    25%{
+        transform: rotate(-90deg);
+        filter: brightness(1.5);
+    }
+    75%{
+        transform: rotate(-180deg);
+        filter: brightness(1);
+    }
+    75%{
+        transform: rotate(90deg);
+        filter: brightness(1.5);
+    }
+    100%{
+        transform: rotate(0deg);
+        filter: brightness(1);
+    }
+
+}
